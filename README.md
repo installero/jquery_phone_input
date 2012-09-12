@@ -1,6 +1,6 @@
 An input that automaticly determines the country of an entered phone. Using jQuery framwork.
 
-![Input screenshot](demo.png)
+![Input screenshot](jqeury_phone_input/master/demo.png)
 
 ## Live demo
 
