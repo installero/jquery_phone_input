@@ -1,10 +1,10 @@
 An input that automaticly determines the country of an entered phone. Using jQuery framwork.
 
-![Input screenshot](https://raw.github.com/installero/jqeury_phone_input/master/demo.png)
+![jQuery input screenshot](http://installero.com/jquery_phone_input/)
 
 ## Live demo
 
-[installero.com/examples/phone_input](http://installero.ru/examples/phone_input.html)
+[installero.com/jquery_phone_input](http://installero.com/jquery_phone_input/)
 
 ## Installation & usage
 
