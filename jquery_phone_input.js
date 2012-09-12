@@ -40,16 +40,18 @@ var i_class = 'jquery-phone-input';
 
 var drawPhoneAfterInput = function(el){
   var phone = el.val();
-  var code = detectPhoneCode(phone);
-  var div = el.next('.'+i_class+'-div').html('');
-  var img = $('<img/>',{
-    src:'images/'+code['name']+'.png',
-    alt:code['name'],
-    class:i_class+'-img',
-    title:code['title']
-  }).appendTo(div);
-  var em = $('<em>').addClass(i_class+'-em').appendTo(div);
-  em.html(applyPhoneMask(phone,code['mask']));
+  if(phone != ''){
+    var code = detectPhoneCode(phone);
+    var div = el.next('.'+i_class+'-div').html('');
+    var img = $('<img/>',{
+      src:'images/'+code['name']+'.png',
+        alt:code['name'],
+        class:i_class+'-img',
+        title:code['title']
+    }).appendTo(div);
+    var em = $('<em>').addClass(i_class+'-em').appendTo(div);
+    em.html(applyPhoneMask(phone,code['mask']));
+  }
 };
 
 $(function() {
