@@ -1,10 +1,10 @@
-    // jquery phone input by installero
+// jquery phone input by installero
 
-    //var country_codes = [
-    //  {code:'7', mask:'+# ### ###-##-##', name:'ru'},
-    //  {code:'8', mask:'# ### ###-##-##', name:'ru'},
-    //  {code:'44', mask:'+## ### ### ####', name:'en'}
-    //];
+//var country_codes = [
+//  {code:'7', mask:'+# ### ###-##-##', name:'ru'},
+//  {code:'8', mask:'# ### ###-##-##', name:'ru'},
+//  {code:'44', mask:'+## ### ### ####', name:'en'}
+//];
 
 var detectPhoneCode = function(phone){
   phone = phone.replace(/[^0-9]/g,'');
@@ -54,6 +54,16 @@ var drawPhoneAfterInput = function(el){
   }
 };
 
+var insertDefaultCode = function(el){
+  if(el.val()==''||el.val()==el.attr('data-default_code')){
+    el.val(el.attr('data-default_code'));
+    el.addClass('jquery-phone-input__blurred');
+  }
+  if (el.is(":focus")){
+    el.removeClass('jquery-phone-input__blurred');
+  };
+};
+
 $(function() {
   $('.'+i_class).each(function(i){
     $('<div>').addClass(i_class+'-div').insertAfter($(this));
@@ -61,6 +71,10 @@ $(function() {
     $(this).bind('keydown keyup',function(){
       drawPhoneAfterInput($(this));
     });
+    $(this).bind('focus blur',function(){
+      insertDefaultCode($(this));
+    });
+    insertDefaultCode($(this));
     drawPhoneAfterInput($(this));
   });
 });

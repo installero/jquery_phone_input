@@ -13,4 +13,4 @@ An input that automaticly determines the country of an entered phone. Using jQue
     <script src="country_codes.js" type="text/javascript"></script>
     <script src="jquery_phone_input.js" type="text/javascript"></script>
     ...
-    <input type="text" class="jquery-phone-input" name="phone"/>
+    <input type="text" class="jquery-phone-input" data-default_code="+7" name="phone"/>
