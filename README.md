@@ -1,4 +1,4 @@
-An input that automaticly determines the country of an entered phone. Using jQuery framwork.
+An input that automatically determines the country of an entered phone. Using jQuery framework.
 
 ![jQuery input screenshot](http://installero.com/jquery_phone_input/demo.png)
 
