@@ -58,7 +58,7 @@ $(function() {
   $('.'+i_class).each(function(i){
     $('<div>').addClass(i_class+'-div').insertAfter($(this));
 
-    $(this).bind('keydown keyup',function(){
+    $(this).bind('keydown keyup blur change',function(){
       drawPhoneAfterInput($(this));
     });
     drawPhoneAfterInput($(this));
