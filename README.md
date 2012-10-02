@@ -1,4 +1,4 @@
-An input that automaticly determines the country of an entered phone. Using jQuery framwork.
+An input that automatically determines the country of an entered phone. Using jQuery framework.
 
 ![jQuery input screenshot](http://installero.com/jquery_phone_input/demo.png)
 
@@ -13,4 +13,4 @@ An input that automaticly determines the country of an entered phone. Using jQue
     <script src="country_codes.js" type="text/javascript"></script>
     <script src="jquery_phone_input.js" type="text/javascript"></script>
     ...
-    <input type="text" class="jquery-phone-input" name="phone"/>
+    <input type="text" class="jquery-phone-input" data-default_code="+7" name="phone"/>
