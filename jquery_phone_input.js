@@ -43,26 +43,27 @@ var drawPhoneAfterInput = function(el){
   if(phone != ''){
     var code = detectPhoneCode(phone);
     var div = el.next('.'+i_class+'-div').html('');
-    var img = $('<img/>',{
-      src:'images/'+code['name']+'.png',
+    if(code['name'] != ''){
+      var img = $('<img/>',{
+        src:'images/'+code['name']+'.png',
         alt:code['name'],
-        class:i_class+'-img',
         title:code['title']
-    }).appendTo(div);
+      }).addClass(i_class+'-img').appendTo(div);
+    };
     var em = $('<em>').addClass(i_class+'-em').appendTo(div);
     em.html(applyPhoneMask(phone,code['mask']));
   }
 };
 
 var insertDefaultCode = function(el){
-  if(el.val()==''||el.val()==el.attr('data-default_code')){
-    el.val(el.attr('data-default_code'));
-    el.addClass('jquery-phone-input__blurred');
-  }
-  if (el.is(":focus")){
+  if(el.val()==''){el.val(el.attr('data-default_code'));}
+  if(el.is(":focus")){
     el.removeClass('jquery-phone-input__blurred');
+  }else if(el.val()==''||el.val()==el.attr('data-default_code')){
+    el.addClass('jquery-phone-input__blurred');
   };
 };
+
 
 $(function() {
   $('.'+i_class).each(function(i){
